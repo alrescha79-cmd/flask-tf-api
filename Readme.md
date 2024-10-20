@@ -75,7 +75,7 @@ Use curl or tools like Postman to send a POST request to the /predict endpoint w
 curl -X POST -F 'file=@/path/to/your/image.jpg' http://localhost:5000/predict
 ```
 
-Replace /path/to/your/image.jpg with the path to your image file. The API will return a JSON response containing the predicted class and its confidence percentage.
+Replace `/path/to/your/image.jpg` with the path to your image file. The API will return a JSON response containing the predicted class and its confidence percentage.
 
 ## Testing
 
