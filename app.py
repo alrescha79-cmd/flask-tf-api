@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 
-model = tf.keras.models.load_model('model/model.h5')
+model = tf.keras.models.load_model('model/model-Corn-Leaf-Diseases-Exception-92.12.h5')
 
 class_labels = {0: 'Blight', 1: 'Common_Rust', 2: 'Gray_Leaf_Spot', 3: 'Healthy'}
 
@@ -54,6 +54,6 @@ def predict():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-# if __name__ == '__main__':
-#     app.run(host='0.0.0.0', port=5000)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
 

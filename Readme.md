@@ -77,36 +77,21 @@ curl -X POST -F 'file=@/path/to/your/image.jpg' http://localhost:5000/predict
 
 Replace `/path/to/your/image.jpg` with the path to your image file. The API will return a JSON response containing the predicted class and its confidence percentage.
 
-## Testing
-
-To test the API:
-
-### Unit Tests
-
-Create unit tests to validate model predictions and API responses. If using pytest, you can run:
-
-```bash
-pytest
-```
-
-### Manual Testing
-
-Upload different images of corn leaves to test if the model returns the correct prediction.
-
 ### Example Response
 
 After sending a request with an image, you should receive a JSON response like this:
 
 ```json
 {
-  "predicted_class": "Healthy",
-  "predicted_percentage": "95.67%",
-  "probabilities": {
-    "Blight": "1.23%",
-    "Common_Rust": "2.45%",
-    "Gray_Leaf_Spot": "0.65%",
-    "Healthy": "95.67%"
-  }
+    "predicted_class": "Common_Rust",
+    "predicted_percentage": "78.11%",
+    "probabilities": {
+        "Blight": "6.51%",
+        "Common_Rust": "78.11%",
+        "Gray_Leaf_Spot": "14.92%",
+        "Healthy": "0.46%"
+    },
+    "success": true
 }
 ```
 
